@@ -65,7 +65,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           HERO — Cinematic Agro-Tech
           ═══════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-green-950 via-green-900 to-black py-32">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-green-950 via-green-900 to-black py-20 lg:py-32">
         {/* Background layers */}
         <div className="absolute inset-0 z-0">
           {/* Stardust texture */}
@@ -99,7 +99,7 @@ export default function HomePage() {
                 </span>
               </motion.div>
 
-              <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
                 A força para a sua{' '}
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
@@ -141,7 +141,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative z-10 bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-10 rounded-3xl shadow-2xl"
+              className="relative z-10 bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-2xl"
             >
               {/* Glow behind form */}
               <div className="absolute -inset-1 bg-gradient-to-br from-yellow-400/10 to-green-400/5 rounded-3xl blur-xl -z-10" />
@@ -214,7 +214,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           STATS — Key Metrics
           ═══════════════════════════════════════════════ */}
-      <section className="relative w-full py-32 bg-white overflow-hidden">
+      <section className="relative w-full py-16 lg:py-32 bg-white overflow-hidden">
         {/* Dot pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(circle,#1e4321_1px,transparent_1px)] bg-[size:24px_24px]" />
 
@@ -256,7 +256,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           LANÇAMENTOS — Product Grid
           ═══════════════════════════════════════════════ */}
-      <section className="relative w-full py-32 bg-gray-50 overflow-hidden">
+      <section className="relative w-full py-16 lg:py-32 bg-gray-50 overflow-hidden">
         <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 sm:px-8 lg:px-16 flex flex-col gap-14">
           <motion.div {...sectionFadeIn} className="text-center">
             <span className="inline-flex items-center gap-2 text-yellow-600 text-xs font-bold uppercase tracking-[0.25em] mb-4">
@@ -270,7 +270,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-5 pb-4 -mx-6 px-6 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible sm:snap-none sm:pb-0">
             {lancamentos.slice(0, 8).map((semente, index) => (
               <motion.div
                 key={semente.id}
@@ -278,7 +278,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="bg-white border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 rounded-2xl overflow-hidden group"
+                className="min-w-[85vw] snap-center sm:min-w-0 bg-white border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 rounded-2xl overflow-hidden group"
               >
                 <div className="relative h-44 bg-gradient-to-br from-celeiro-green-dark/5 via-gray-50 to-yellow-50/30 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -330,7 +330,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           QUEM SOMOS — Heritage + Mission
           ═══════════════════════════════════════════════ */}
-      <section className="relative w-full py-32 bg-white overflow-hidden">
+      <section className="relative w-full py-16 lg:py-32 bg-white overflow-hidden">
         <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 sm:px-8 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Column 1: 30 Years Card */}
@@ -417,7 +417,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           DESTAQUES — Dark Glassmorphism Grid
           ═══════════════════════════════════════════════ */}
-      <section className="relative w-full py-32 bg-gradient-to-br from-green-950 via-green-900 to-black overflow-hidden">
+      <section className="relative w-full py-16 lg:py-32 bg-gradient-to-br from-green-950 via-green-900 to-black overflow-hidden">
         {/* Ambient glow orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-500/[0.05] rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green-500/[0.04] rounded-full blur-[100px] pointer-events-none" />
@@ -438,7 +438,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible sm:snap-none sm:pb-0">
             {destaques.map((semente, index) => (
               <motion.div
                 key={semente.id}
@@ -446,7 +446,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="bg-white/[0.08] backdrop-blur-md rounded-2xl p-7 border border-white/[0.12] hover:border-yellow-500/30 hover:bg-white/[0.12] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
+                className="min-w-[85vw] snap-center sm:min-w-0 bg-white/[0.08] backdrop-blur-md rounded-2xl p-7 border border-white/[0.12] hover:border-yellow-500/30 hover:bg-white/[0.12] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -489,7 +489,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════
           CTA BANNER — Final Call-to-Action
           ═══════════════════════════════════════════════ */}
-      <section className="relative w-full py-24 bg-celeiro-yellow overflow-hidden">
+      <section className="relative w-full py-16 lg:py-24 bg-celeiro-yellow overflow-hidden">
         {/* Dot pattern */}
         <div className="absolute inset-0 opacity-[0.06] pointer-events-none bg-[radial-gradient(circle,#1e4321_1.5px,transparent_1.5px)] bg-[size:28px_28px]" />
 
