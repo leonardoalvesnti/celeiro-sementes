@@ -22,13 +22,13 @@ export default function Footer() {
           {/* Column 1: Logo & About */}
           <div>
             <div className="mb-6">
-              <div className="relative w-48 h-20">
+              <div className="relative w-44 h-16">
                 <Image
-                  src="/images/logo/celeiro-logo.png"
+                  src="/images/logo-celeiro.png"
                   alt="Celeiro Sementes"
                   fill
                   className="object-contain object-left brightness-0 invert"
-                  sizes="192px"
+                  sizes="176px"
                 />
               </div>
             </div>
