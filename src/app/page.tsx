@@ -99,24 +99,27 @@ export default function HomePage() {
                 </span>
               </motion.div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-                A força para a sua{' '}
+              <h1 className="text-[2.75rem] xs:text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight">
+                A força para{' '}
+                <br className="block sm:hidden" />
+                a sua{' '}
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
                     cultivar
                   </span>
                   <motion.span
-                    className="absolute -bottom-1.5 left-0 h-1 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full"
+                    className="absolute -bottom-1 sm:-bottom-1.5 left-0 h-1 sm:h-1.5 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
                     transition={{ delay: 0.8, duration: 0.6 }}
                   />
                 </span>{' '}
+                <br className="block lg:hidden" />
                 prosperar.
               </h1>
 
-              <p className="text-xl text-gray-300 max-w-lg leading-relaxed">
-                Elevando o potencial genético do campo com inovação Agro-Tech
+              <p className="text-lg sm:text-xl text-gray-300/90 max-w-lg leading-snug sm:leading-relaxed font-medium">
+                <span className="hidden sm:inline">Elevando o potencial genético do campo com </span>Inovação Agro-Tech
                 de última geração. Sementes que alimentam o futuro.
               </p>
 
