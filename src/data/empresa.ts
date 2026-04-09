@@ -7,7 +7,7 @@ export const empresa = {
   nome: 'Celeiro Sementes',
   slogan: 'Paixão para cultivar o futuro',
   descricao:
-    'Há mais de 30 anos atuando no mercado de sementes de soja de alta qualidade, a Celeiro Sementes é referência no agronegócio brasileiro.',
+    'Há mais de 46 anos atuando no mercado de sementes de soja de alta qualidade, a Celeiro Sementes é referência no agronegócio brasileiro.',
 
   contato: {
     telefoneFixo: '(61) 3621-2946',

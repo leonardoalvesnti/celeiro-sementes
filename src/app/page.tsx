@@ -368,7 +368,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-green-950/80 mix-blend-multiply" />
               {/* Ambient glow inside card */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-yellow-400/[0.08] rounded-full blur-[80px]" />
-              <span className="relative z-10 bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-extrabold text-8xl block leading-none mb-3">+30</span>
+              <span className="relative z-10 bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-extrabold text-8xl block leading-none mb-3">+46</span>
               <span className="relative z-10 text-white text-xl tracking-wide font-medium">Anos cultivando o futuro</span>
             </div>
           </motion.div>
