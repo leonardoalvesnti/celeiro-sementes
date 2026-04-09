@@ -456,15 +456,19 @@ export default function HomePage() {
           </motion.div>
 
           <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible sm:snap-none sm:pb-0">
-            {destaques.map((semente, index) => (
-              <motion.div
-                key={semente.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-                className={`min-w-[85vw] snap-center sm:min-w-0 bg-white/[0.08] backdrop-blur-md rounded-2xl p-7 border border-white/[0.12] hover:border-yellow-500/30 hover:bg-white/[0.12] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group ${index >= 3 ? 'hidden sm:block' : ''}`}
-              >
+            {destaques.map((semente, index) => {
+              // Hides non-Latitude seeds on mobile screens
+              const hideOnMobileClass = semente.marca !== 'Latitude' ? 'hidden sm:block' : '';
+              
+              return (
+                <motion.div
+                  key={semente.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className={`min-w-[85vw] snap-center sm:min-w-0 bg-white/[0.08] backdrop-blur-md rounded-2xl p-7 border border-white/[0.12] hover:border-yellow-500/30 hover:bg-white/[0.12] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group ${hideOnMobileClass}`}
+                >
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <span className="text-yellow-400 text-xs font-bold uppercase tracking-[0.25em]">
@@ -497,8 +501,9 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

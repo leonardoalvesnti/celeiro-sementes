@@ -12,6 +12,7 @@ export default function SementesPage() {
   const [cicloSelecionado, setCicloSelecionado] = useState<Ciclo | ''>('');
   const [tecSelecionada, setTecSelecionada] = useState<Tecnologia | ''>('');
   const [showFilters, setShowFilters] = useState(false);
+  const [mobileLimit, setMobileLimit] = useState(4);
 
   const filtered = useMemo(() => {
     return sementes.filter((s) => {
@@ -153,7 +154,7 @@ export default function SementesPage() {
           {/* Catalog Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <AnimatePresence mode="popLayout">
-              {filtered.map((semente) => (
+              {filtered.map((semente, index) => (
                 <motion.div
                   key={semente.id}
                   layout
@@ -161,7 +162,7 @@ export default function SementesPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group border border-celeiro-gray-200/50"
+                  className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group border border-celeiro-gray-200/50 ${index >= mobileLimit ? 'hidden sm:block' : ''}`}
                 >
                   <div className="relative h-44 bg-gradient-to-br from-celeiro-gray-100 to-white overflow-hidden flex items-center justify-center p-4">
                     <Image src={semente.imagem} alt={semente.nome} width={300} height={150} className="object-contain max-h-36 group-hover:scale-105 transition-transform" />
@@ -212,6 +213,18 @@ export default function SementesPage() {
               ))}
             </AnimatePresence>
           </div>
+
+          {/* Mobile "Ver Mais" Button */}
+          {filtered.length > mobileLimit && (
+            <div className="mt-10 flex justify-center sm:hidden">
+              <button
+                onClick={() => setMobileLimit((prev) => prev + 100)} // Shows all remaining
+                className="bg-celeiro-yellow hover:bg-yellow-400 text-green-950 font-bold px-8 py-3.5 rounded-xl shadow-lg transition-transform active:scale-95"
+              >
+                Ver Todas
+              </button>
+            </div>
+          )}
 
           {filtered.length === 0 && (
             <div className="text-center py-20">
