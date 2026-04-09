@@ -99,7 +99,7 @@ export default function HomePage() {
                 </span>
               </motion.div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
                 A força para a sua{' '}
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
@@ -193,7 +193,21 @@ export default function HomePage() {
             <span className="text-gray-500 text-xs font-semibold uppercase tracking-[0.25em] whitespace-nowrap hidden sm:block">
               Parceiros oficiais
             </span>
-            <div className="flex items-center justify-center gap-8 sm:gap-16 flex-1">
+            <div className="flex overflow-hidden relative w-full sm:hidden">
+              <div className="flex items-center gap-8 min-w-max animate-marquee">
+                {[...parceiros, ...parceiros, ...parceiros].map((parceiro, i) => (
+                  <span
+                    key={`${parceiro}-${i}`}
+                    className="text-gray-500/60 font-extrabold text-sm tracking-[0.2em]"
+                  >
+                    {parceiro}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            {/* Desktop */}
+            <div className="hidden sm:flex items-center justify-center gap-8 sm:gap-16 flex-1">
               {parceiros.map((parceiro, i) => (
                 <motion.span
                   key={parceiro}
@@ -278,7 +292,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="min-w-[85vw] snap-center sm:min-w-0 bg-white border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 rounded-2xl overflow-hidden group"
+                className={`min-w-[85vw] snap-center sm:min-w-0 bg-white border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 rounded-2xl overflow-hidden group ${index >= 3 ? 'hidden sm:block' : ''}`}
               >
                 <div className="relative h-44 bg-gradient-to-br from-celeiro-green-dark/5 via-gray-50 to-yellow-50/30 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -375,7 +389,7 @@ export default function HomePage() {
             <p className="text-celeiro-gray-500 leading-relaxed text-lg">
               {empresa.descricao}
             </p>
-            <p className="text-celeiro-gray-500 leading-relaxed">
+            <p className="text-celeiro-gray-500 leading-relaxed hidden sm:block">
               Com sede em Monte Alegre do Piauí,
               levamos as melhores genéticas de soja a produtores de todo o Brasil,
               sempre com foco em qualidade, inovação e atendimento técnico especializado.
@@ -446,7 +460,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="min-w-[85vw] snap-center sm:min-w-0 bg-white/[0.08] backdrop-blur-md rounded-2xl p-7 border border-white/[0.12] hover:border-yellow-500/30 hover:bg-white/[0.12] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
+                className={`min-w-[85vw] snap-center sm:min-w-0 bg-white/[0.08] backdrop-blur-md rounded-2xl p-7 border border-white/[0.12] hover:border-yellow-500/30 hover:bg-white/[0.12] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group ${index >= 3 ? 'hidden sm:block' : ''}`}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>

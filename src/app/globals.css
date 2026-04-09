@@ -161,6 +161,14 @@
   50% { box-shadow: 0 0 40px rgba(140, 194, 73, 0.25); }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
 /* --- Base Styles (in @layer base so utilities like mx-auto can override) --- */
 @layer base {
   html {

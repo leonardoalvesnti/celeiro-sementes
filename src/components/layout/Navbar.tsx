@@ -33,8 +33,9 @@ export default function Navbar() {
   }, [isMobileOpen]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg py-2 border-b border-celeiro-gray-200/50'
           : 'bg-white/90 backdrop-blur-sm py-4'
@@ -98,6 +99,7 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+      </header>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
@@ -163,6 +165,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
