@@ -12,12 +12,15 @@ const valores = [
 ];
 
 const timeline = [
-  { ano: '1994', titulo: 'Fundação', descricao: 'Início das atividades com produção de sementes de soja no Sul do Piauí.' },
+  { ano: '1980', titulo: 'Primeira Unidade', descricao: 'Fundamos a 1ª unidade em Luziânia - GO' },
+  { ano: '1989', titulo: 'Inovação no Plantio', descricao: 'Iniciamos o plantio em área irrigada em Luziânia - GO' },
+  { ano: '1994', titulo: 'Pioneirismo', descricao: 'Nos tornamos a 1ª empresa brasileira a importar colheitadeiras Case no Brasil' },
   { ano: '2005', titulo: 'Expansão Regional', descricao: 'Ampliação do atendimento para toda a região do MATOPIBA (MA, TO, PI, BA).' },
+  { ano: '2009', titulo: 'Nova Sede', descricao: 'Inauguramos a Unidade em Monte Alegre do Piauí - PI' },
   { ano: '2015', titulo: 'Novas Parcerias', descricao: 'Consolidação de parcerias com as principais obtentoras: Brasmax, TMG, Latitude e SoyTech.' },
-
-  { ano: '2024', titulo: '+30 Anos', descricao: 'Mais de 30 anos de tradição e inovação, com presença em 9 estados brasileiros.' },
+  { ano: '2026', titulo: '+46 Anos', descricao: 'Mais de 46 anos de tradição e inovação, com presença em 9 estados brasileiros.' },
 ];
+
 
 export default function SobrePage() {
   return (
@@ -28,13 +31,13 @@ export default function SobrePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex items-center gap-2 bg-celeiro-yellow/20 text-celeiro-yellow px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-celeiro-yellow/30">
-              <Leaf className="w-4 h-4" /> Desde 1994
+              <Leaf className="w-4 h-4" /> Desde 1980
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
               Sobre a <span className="text-celeiro-yellow">Celeiro Sementes</span>
             </h1>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
-              Mais de 30 anos de história, dedicação e paixão pelo agronegócio brasileiro.
+              Mais de 46 anos de história, dedicação e paixão pelo agronegócio brasileiro.
             </p>
           </motion.div>
         </div>
@@ -49,7 +52,7 @@ export default function SobrePage() {
                 <Image src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80" alt="Lavoura de soja" fill className="object-cover" />
                 <div className="absolute inset-0 bg-green-950/80 mix-blend-multiply" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-extrabold text-8xl block leading-none mb-3">+30</span>
+                  <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-extrabold text-8xl block leading-none mb-3">+46</span>
                   <span className="text-white text-xl tracking-wide font-medium">Anos de mercado</span>
                 </div>
               </div>

@@ -7,7 +7,7 @@
 export interface Semente {
   id: string;
   nome: string;
-  marca: 'Brasmax' | 'Latitude' | 'SoyTech' | 'TMG';
+  marca: 'Brasmax' | 'Latitude' | 'TMG';
   imagem: string;
   destaque: boolean;
   lancamento: boolean;
@@ -197,9 +197,9 @@ export const sementes: Semente[] = [
     descricaoCurta: 'Tecnologia RR com boa adaptação para o MATOPIBA.',
   },
   {
-    id: 'lat-jatoba',
-    nome: 'Latitude Jatobá',
-    marca: 'Latitude',
+    id: 'tmg-jatoba',
+    nome: 'TMG Jatobá I2X',
+    marca: 'TMG',
     imagem: '/images/sementes/JATOBA.png',
     destaque: false,
     lancamento: false,
@@ -209,14 +209,14 @@ export const sementes: Semente[] = [
       exigenciaFertilidade: 'Média',
       potencialProdutivo: 'Alto',
       resistenciaNematoide: true,
-      tecnologia: 'Intacta RR2 PRO',
+      tecnologia: 'Intacta 2 Xtend',
     },
     descricaoCurta: 'Precocidade aliada a estabilidade produtiva em áreas de cerrado.',
   },
   {
-    id: 'lat-inga',
-    nome: 'Latitude Ingá',
-    marca: 'Latitude',
+    id: 'tmg-inga',
+    nome: 'TMG Ingá I2X',
+    marca: 'TMG',
     imagem: '/images/sementes/INGA.png',
     destaque: false,
     lancamento: false,
@@ -226,14 +226,14 @@ export const sementes: Semente[] = [
       exigenciaFertilidade: 'Alta',
       potencialProdutivo: 'Muito Alto',
       resistenciaNematoide: true,
-      tecnologia: 'Intacta RR2 PRO',
+      tecnologia: 'Intacta 2 Xtend',
     },
     descricaoCurta: 'Alta performance em solos de alta fertilidade com excelente arquitetura.',
   },
   {
-    id: 'lat-murici',
-    nome: 'Latitude Murici',
-    marca: 'Latitude',
+    id: 'tmg-murici',
+    nome: 'TMG Murici I2X',
+    marca: 'TMG',
     imagem: '/images/sementes/MURICI.png',
     destaque: false,
     lancamento: false,
@@ -243,14 +243,14 @@ export const sementes: Semente[] = [
       exigenciaFertilidade: 'Média',
       potencialProdutivo: 'Alto',
       resistenciaNematoide: false,
-      tecnologia: 'RR',
+      tecnologia: 'Intacta 2 Xtend',
     },
     descricaoCurta: 'Versatilidade e boa adaptação para diversas regiões do cerrado.',
   },
   {
-    id: 'lat-copaiba',
-    nome: 'Latitude Copaíba',
-    marca: 'Latitude',
+    id: 'tmg-copaiba',
+    nome: 'TMG Copaíba I2X',
+    marca: 'TMG',
     imagem: '/images/sementes/COPAIBA.png',
     destaque: false,
     lancamento: false,
@@ -260,14 +260,14 @@ export const sementes: Semente[] = [
       exigenciaFertilidade: 'Média/Alta',
       potencialProdutivo: 'Alto',
       resistenciaNematoide: true,
-      tecnologia: 'Intacta RR2 PRO',
+      tecnologia: 'Intacta 2 Xtend',
     },
     descricaoCurta: 'Estabilidade produtiva em diversas condições de solo e clima.',
   },
   {
-    id: 'lat-paineira',
-    nome: 'Latitude Paineira',
-    marca: 'Latitude',
+    id: 'tmg-paineira',
+    nome: 'TMG Paineira I2X',
+    marca: 'TMG',
     imagem: '/images/sementes/PAINEIRA.png',
     destaque: false,
     lancamento: false,
@@ -277,14 +277,14 @@ export const sementes: Semente[] = [
       exigenciaFertilidade: 'Alta',
       potencialProdutivo: 'Alto',
       resistenciaNematoide: true,
-      tecnologia: 'Intacta RR2 PRO',
+      tecnologia: 'Intacta 2 Xtend',
     },
     descricaoCurta: 'Equilíbrio entre precocidade e potencial produtivo com boa sanidade.',
   },
   {
-    id: 'lat-brauna',
-    nome: 'Latitude Braúna',
-    marca: 'Latitude',
+    id: 'tmg-brauna',
+    nome: 'TMG Braúna I2X',
+    marca: 'TMG',
     imagem: '/images/sementes/BRAUNA.png',
     destaque: false,
     lancamento: false,
@@ -294,14 +294,14 @@ export const sementes: Semente[] = [
       exigenciaFertilidade: 'Média',
       potencialProdutivo: 'Alto',
       resistenciaNematoide: false,
-      tecnologia: 'RR',
+      tecnologia: 'Intacta 2 Xtend',
     },
     descricaoCurta: 'Superprecoce ideal para antecipação de colheita e segunda safra.',
   },
   {
-    id: 'lat-jacareuba',
-    nome: 'Latitude Jacareúba',
-    marca: 'Latitude',
+    id: 'tmg-jacareuba',
+    nome: 'TMG Jacareúba E',
+    marca: 'TMG',
     imagem: '/images/sementes/JACAREUBA.png',
     destaque: false,
     lancamento: false,
@@ -350,9 +350,9 @@ export const sementes: Semente[] = [
     descricaoCurta: 'Ciclo tardio com alto potencial e resistência múltipla.',
   },
   {
-    id: 'lat-balsamo',
-    nome: 'Latitude Bálsamo',
-    marca: 'Latitude',
+    id: 'tmg-balsamo',
+    nome: 'TMG Bálsamo I2X',
+    marca: 'TMG',
     imagem: '/images/sementes/BALSAMO.png',
     destaque: false,
     lancamento: false,
@@ -367,11 +367,11 @@ export const sementes: Semente[] = [
     descricaoCurta: 'Alto potencial com I2X e ampla janela de plantio.',
   },
 
-  // ─── SOYTECH ───
+  // ─── LATITUDE (adicional) ───
   {
-    id: 'st-amplía',
-    nome: 'SoyTech Amplía',
-    marca: 'SoyTech',
+    id: 'lat-amplia',
+    nome: 'Latitude Amplia',
+    marca: 'Latitude',
     imagem: '/images/sementes/AMPLIA.png',
     destaque: true,
     lancamento: true,
@@ -386,9 +386,9 @@ export const sementes: Semente[] = [
     descricaoCurta: 'Potencial produtivo excepcional para plantios de ciclo tardio.',
   },
   {
-    id: 'st-eleva',
-    nome: 'SoyTech Eleva',
-    marca: 'SoyTech',
+    id: 'lat-eleva',
+    nome: 'Latitude Eleva',
+    marca: 'Latitude',
     imagem: '/images/sementes/ELEVA.png',
     destaque: true,
     lancamento: false,
@@ -403,9 +403,9 @@ export const sementes: Semente[] = [
     descricaoCurta: 'Versátil e com ampla adaptação para solos de boa fertilidade.',
   },
   {
-    id: 'st-insana',
-    nome: 'SoyTech Insana',
-    marca: 'SoyTech',
+    id: 'lat-insana',
+    nome: 'Latitude Insana',
+    marca: 'Latitude',
     imagem: '/images/sementes/INSANA.png',
     destaque: false,
     lancamento: false,
@@ -492,7 +492,7 @@ export const sementes: Semente[] = [
 ];
 
 // Helper functions for filtering
-export const marcas = ['Brasmax', 'Latitude', 'SoyTech', 'TMG'] as const;
+export const marcas = ['Brasmax', 'Latitude', 'TMG'] as const;
 export type Marca = (typeof marcas)[number];
 
 export const ciclos = ['Superprecoce', 'Precoce', 'Médio', 'Médio/Tardio', 'Tardio'] as const;
