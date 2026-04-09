@@ -124,10 +124,15 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-white/60 text-sm">
+                <a
+                  href="https://www.google.com/maps/place/Fazenda+Celeiro+Sementes+Piau%C3%AD/@-9.400744,-45.121316,16z/data=!4m6!3m5!1s0x9332a1173ca1d721:0xadbe3c3c9e00f259!8m2!3d-9.4007442!4d-45.1213164!16s%2Fg%2F11q1n65y34?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDQwNy4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-white/60 hover:text-white transition-colors text-sm"
+                >
                   <MapPin className="w-5 h-5 mt-0.5 text-celeiro-green-light flex-shrink-0" />
                   <span>{empresa.endereco.completo}</span>
-                </div>
+                </a>
               </li>
             </ul>
           </div>

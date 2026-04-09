@@ -15,11 +15,11 @@ import { useEffect, useRef } from 'react';
 
 const stats = [
   { icon: Sprout, value: 27, suffix: '', label: 'Cultivares de alta performance' },
-  { icon: TrendingUp, value: 30, suffix: '+', label: 'Anos de experiência no campo' },
+  { icon: TrendingUp, value: 46, suffix: '+', label: 'Anos de experiência no campo' },
   { icon: Users, value: 9, suffix: '', label: 'Estados com atuação direta' },
 ];
 
-const parceiros = ['BRASMAX', 'LATITUDE', 'TMG', 'SoyTech'];
+const parceiros = ['BRASMAX', 'LATITUDE', 'TMG'];
 
 const lancamentos = sementes.filter((s) => s.lancamento);
 const destaques = sementes.filter((s) => s.destaque).slice(0, 6);
